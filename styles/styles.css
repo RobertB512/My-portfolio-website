@@ -11,3 +11,62 @@ body {
   background: no-repeat center/100% url(../images/rusticWoodBackground.jpg);
   height: 100vh;
 }
+
+/* top content */
+.top-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 10rem;
+}
+.coffee-box, .food-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  position: relative;
+  
+}
+.content-heading {
+  font-size: 3.5rem;
+  color: hsl(60, 100%, 50%);
+  /* position: absolute; */
+  /* top: 5rem;
+  left: center; */
+  /* z-index: 3; */
+}
+.content-heading:hover {
+  color: hsl(60, 100%, 90%);
+
+}
+.content-heading:active {
+  color: hsl(60, 100%, 50%);
+
+}
+
+
+.coffee, .plate {
+  width: 20rem;
+  height: auto;
+}
+.about-me, .likes-interests {
+  display: none;
+}
+.coffee {
+  rotate: 135deg;
+}
+.plate {
+  margin-bottom: 1rem;
+}
+.food {
+  width: 14rem;
+  height: auto;
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
+  z-index: 2;
+}
+
+
+
+
