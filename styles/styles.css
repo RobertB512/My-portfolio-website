@@ -8,6 +8,9 @@ html {
   font-size: 62.5%;
 }
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: no-repeat center/100% url(../images/rusticWoodBackground.jpg);
   height: 100vh;
 }
@@ -16,7 +19,7 @@ body {
 .top-content {
   display: flex;
   justify-content: space-between;
-  padding: 3rem 10rem;
+  padding: 1rem 10rem;
 }
 .coffee-box, .food-box{
   display: flex;
@@ -44,7 +47,7 @@ body {
 
 }
 .coffee, .plate {
-  width: 20rem;
+  width: 17rem;
   height: auto;
 }
 .about-me, .likes-interests {
@@ -57,11 +60,11 @@ body {
   margin-bottom: 1rem;
 }
 .food {
-  width: 14rem;
+  width: 11rem;
   height: auto;
   position: absolute;
   top: 2rem;
-  left: 3rem;
+  left: 4rem;
   z-index: 2;
 }
 
@@ -69,21 +72,45 @@ body {
 .center-content {
   display: flex;
   justify-content: center;
-  padding: 3rem 10rem;
+  padding: 1rem 10rem;
 }
 .tablet {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 27.4rem;
-  height: 17.51rem;
+  width: 24.4rem;
+  height: 14.51rem;
   background-color: hsl(0, 0%, 0%);
   border: 0.5rem solid hsl(223, 3%, 46%);
-  border-radius: 1rem
+  border-radius: 1rem;
+  z-index: 10;
 }
 .tablet-name {
   color: hsl(0, 0%, 100%);
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 
+/* bottom content  */
+.bottom-content {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 10rem;
+}
+.sound-box {
+  width: fit-content;
+  position: relative;
+}
+.headphones {
+  width: 35rem;
+  height: auto;
+}
+.background-audio {
+  display: none;
+  position: absolute;
+  top: 10rem;
+  left: 4rem;
+  /* border-radius: 50%;
+  width: 30rem;
+  height: 30rem; */
+}
