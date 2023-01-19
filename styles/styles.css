@@ -11,16 +11,32 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   background: no-repeat center/100% url(../images/rusticWoodBackground.jpg);
   height: 100vh;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.top-content,
+.center-content,
+.bottom-content {
+  width: 100%;
+  padding: 1rem 10rem;
 }
 
 /* top content */
 .top-content {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 10rem;
 }
 .coffee-box, .food-box{
   display: flex;
@@ -75,7 +91,6 @@ body {
 .center-content {
   display: flex;
   justify-content: center;
-  padding: 1rem 10rem;
 }
 .tablet {
   display: flex;
@@ -97,7 +112,6 @@ body {
 .bottom-content {
   display: flex;
   justify-content: center;
-  padding: 1rem 10rem;
 }
 .sound-box {
   display: flex;
@@ -133,4 +147,22 @@ body {
   /* border-radius: 50%;
   width: 30rem;
   height: 30rem; */
+}
+
+
+.back-to-table {
+  position: fixed;
+  bottom: 1.5rem;
+  border: none;
+  border-radius: 9999px;
+  padding: 1.5rem 2.5rem;
+  background-color: hsl(0, 100%, 27%);
+  color: hsl(0, 0%, 100%);
+  font-size: 2.5rem;
+}
+.back-to-table:hover {
+  background-color: hsl(0, 100%, 60%);
+}
+.back-to-table:active {
+  background-color: hsl(0, 100%, 27%);
 }
