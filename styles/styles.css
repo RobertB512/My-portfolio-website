@@ -152,6 +152,7 @@ body {
 
 
 .back-to-table {
+  visibility: hidden;
   position: fixed;
   bottom: 1.5rem;
   border: none;
