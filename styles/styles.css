@@ -27,29 +27,30 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: fit-content;
+  width: 17rem;
+  height: fit-content;
   position: relative;
   
 }
-.content-heading {
+.table-section-heading {
+  text-align: center;
   font-size: 3.5rem;
-  color: hsl(60, 100%, 50%);
-  /* position: absolute; */
-  /* top: 5rem;
-  left: center; */
-  /* z-index: 3; */
+  color: hsl(240, 100%, 50%);
+  position: absolute;
+  top: 5rem;
+  z-index: 3;
 }
-.content-heading:hover {
-  color: hsl(60, 100%, 90%);
+.table-section-heading:hover {
+  color: hsl(240, 100%, 30%);
   cursor: pointer;
 
 }
-.content-heading:active {
-  color: hsl(60, 100%, 50%);
+.table-section-heading:active {
+  color: hsl(240, 100%, 50%);
 
 }
 .coffee, .plate {
-  width: 17rem;
+  width: 100%;
   height: auto;
 }
 .about-me, .likes-interests {
@@ -58,15 +59,15 @@ body {
 .coffee {
   rotate: 135deg;
 }
-.plate {
+/* .plate {
   margin-bottom: 1rem;
-}
+} */
 .food {
-  width: 11rem;
+  width: 70%;
   height: auto;
   position: absolute;
   top: 2rem;
-  left: 4rem;
+  left: center;
   z-index: 2;
 }
 
@@ -92,7 +93,6 @@ body {
   font-size: 2rem;
 }
 
-
 /* bottom content  */
 .bottom-content {
   display: flex;
@@ -100,22 +100,27 @@ body {
   padding: 1rem 10rem;
 }
 .sound-box {
-  width: fit-content;
+  display: flex;
+  justify-content: center;
+  width: 35rem;
   position: relative;
 }
 .headphones {
-  width: 35rem;
+  width: 100%;
   height: auto;
 }
 .play-and-pause {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 6rem;
-  left: 8rem;
-  border: 2rem solid indigo;
+  top: 5rem;
+  /* left: 5rem; */
+  border: 2rem solid hsl(275, 100%, 25%);
   border-radius: 50%;
   background-color: hsl(120, 100%, 50%);
-  width: 18rem;
-  height: 18rem;
+  width: 17rem;
+  height: 17rem;
   padding: 2rem;
   font-size: 3rem;
   font-weight: 700;
