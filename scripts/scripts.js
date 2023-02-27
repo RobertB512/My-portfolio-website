@@ -1,7 +1,9 @@
 // animation content area
 let contentContainers = document.querySelectorAll(".select-item");
 let orderedItemBoxes = document.querySelectorAll(".ordered-item-box");
-let food = document.querySelectorAll(".food");
+let coffeeBox = document.querySelector(".coffee-box")
+let foodBox = document.querySelector(".food-box")
+let food = document.querySelector(".food");
 let tablet = document.querySelector(".tablet");
 let backToTableBtn = document.querySelector(".back-to-table");
 
@@ -13,36 +15,62 @@ let playing = false;
 
 // some presets
 backToTableBtn.classList.add("hide-back-btn");
-// backToTableBtn.classList.remove("show-back-btn")
 
 // trigger animation area
-// for the animation of the content containers
-// contentContainers.forEach(contentContainer => contentContainer.addEventListener("click", () => {
-//   contentContainer.classList.add("content-container-anim")
-//   backToTableBtn.classList.remove("hide-back-btn")
-//   backToTableBtn.classList.add("show-back-btn")
-// }))
 
-for (let orderedItemBox of orderedItemBoxes) {
-	orderedItemBox.addEventListener("click", () => {
-		orderedItemBox.classList.add("anim-order");
+let animTableItem = (item, animClass) => {
+  item.addEventListener("click", () => {
+    item.classList.add(animClass)
+    if (item.querySelector(".food")) {
+      food.classList.add("anim-food")
+    } 
     backToTableBtn.classList.remove("hide-back-btn");
     backToTableBtn.classList.add("show-back-btn");
-	});
-	
+  })
 }
 
-tablet.addEventListener("click", () => {
-	tablet.classList.add("anim-tablet");
-	backToTableBtn.classList.remove("hide-back-btn");
-	backToTableBtn.classList.add("show-back-btn");
-});
+// for (let orderedItemBox of orderedItemBoxes) {
+// 	orderedItemBox.addEventListener("click", () => {
+// 		orderedItemBox.classList.add("anim-order");
+//     food.classList.add("anim-food")
+//     backToTableBtn.classList.remove("hide-back-btn");
+//     backToTableBtn.classList.add("show-back-btn");
+// 	});
+// }
+
+// coffeeBox.addEventListener("click", () => {
+//   coffeeBox.classList.add("anim-order");
+//     backToTableBtn.classList.remove("hide-back-btn");
+//     backToTableBtn.classList.add("show-back-btn");
+// })
+
+
+
+// foodBox.addEventListener("click", () => {
+//   foodBox.classList.add("anim-order");
+//     food.classList.add("anim-food")
+//     backToTableBtn.classList.remove("hide-back-btn");
+//     backToTableBtn.classList.add("show-back-btn");
+// })
+
+// tablet.addEventListener("click", () => {
+// 	tablet.classList.add("anim-tablet");
+// 	backToTableBtn.classList.remove("hide-back-btn");
+// 	backToTableBtn.classList.add("show-back-btn");
+// });
+
+
+animTableItem(coffeeBox, "anim-order")
+animTableItem(foodBox, "anim-order")
+animTableItem(tablet, "anim-tablet")
+
 
 // go back to table
 backToTableBtn.addEventListener("click", () => {
 	for (let orderedItemBox of orderedItemBoxes) {
 		orderedItemBox.classList.remove("anim-order");
 	}
+  food.classList.remove("anim-food")
 	tablet.classList.remove("anim-tablet");
 	backToTableBtn.classList.remove("show-back-btn");
 	backToTableBtn.classList.add("hide-back-btn");

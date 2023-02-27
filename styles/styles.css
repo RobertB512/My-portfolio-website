@@ -1,3 +1,9 @@
+/* variables */
+:root {
+  --animateTransition: 1.5s;
+  --tabletHeight: 15rem;
+}
+
 /* reset, html, and body styles */
 * {
   padding: 0;
@@ -24,54 +30,66 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 3rem 0;
+  height: 100%;
+  /* padding: 3rem 0; */
 }
 
 .top-content,
 .center-content,
 .bottom-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  padding: 1rem 10rem;
+  height: 33.3%;
+  padding: 5rem 10rem;
 }
 
 /* information container styles */
-.content-container-anim {
-  transform: scale(4);
-  z-index: 10;
-}
 .top-content .anim-order {
   transform: scale(10);
   position: fixed;
-  top:-100%; 
-  right:-100%; 
-  left:-100%; 
-  bottom:-100%;
+  top: 50%; 
+  right: 50%; 
+  left: 50%; 
+  bottom: 50%;
   margin:auto;
   z-index: 10;
-  
+}
+.anim-order > section,
+.anim-order > h2, 
+.anim-order > p {
+  transform: scale(calc(1/10));
+}
+.anim-food {
+  transform: translate(10rem, -10rem);
+}
 
-}
 .anim-tablet {
-  transform: scale(5);
   position: fixed;
-  top:-100%; 
-  right:-100%; 
-  left:-100%; 
-  bottom:-100%;
+  top: -100%; 
+  right: -100%; 
+  left: -100%; 
+  bottom: -100%;
   margin:auto;
+  transform: scale(5);
   z-index: 10;
 }
+.anim-tablet > * {
+  transform: scale(calc(1/5))
+}
+
 
 
 /* top content */
 .top-content {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
-  position: relative;
+  position: absolute;
   top: 0;
 }
 /* .for-alignment {
-  position: absolute;
+  position: relative;
 } */
 .coffee-box, .food-box {
   display: flex;
@@ -81,18 +99,17 @@ body {
   width: 17rem;
   height: fit-content;
   position: relative;
-  transition: 0.5s;
+  transition: var(--animateTransition);
+  z-index: 5;
 }
 
 .coffee-box {
-  position: relative;
   top: 0;
   left: 0;
 }
 .food-box {
-  position: relative;
-  right: 0;
   top: 0;
+  right: 0;
 } 
 
 .table-section-heading {
@@ -119,12 +136,7 @@ body {
 .about-me, .likes-interests {
   display: none;
 }
-.coffee {
-  rotate: 120deg;
-}
-/* .plate {
-  margin-bottom: 1rem;
-} */
+
 .food {
   width: 70%;
   height: auto;
@@ -132,24 +144,27 @@ body {
   top: 2rem;
   left: center;
   z-index: 2;
+  transition: 0.5s;
 }
 
 /* center content */
-.center-content {
+/* .center-content {
   display: flex;
   justify-content: center;
-}
+  align-content: center; */
+  /* height: var(--tabletHeight);
+} */
 .tablet {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 26.6rem;
-  height: 15rem;
+  width: 30rem;
+  height: var(--tabletHeight);
   background-color: hsl(0, 0%, 0%);
   border: 5px solid hsl(223, 3%, 46%);
   border-radius: 1rem;
-  /* z-index: 10; */
-  transition: 0.5s;
+  transition: var(--animateTransition);
+  z-index: 5;
 }
 .tablet-name {
   color: hsl(0, 0%, 100%);
@@ -170,15 +185,16 @@ body {
 
 
 /* bottom content  */
-.bottom-content {
+/* .bottom-content {
   display: flex;
   justify-content: center;
-}
+} */
 .sound-box {
   display: flex;
   justify-content: center;
   width: 35rem;
   position: relative;
+  z-index: 3;
 }
 .headphones {
   width: 100%;
@@ -189,7 +205,7 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 5rem;
+  top: 6rem;
   /* left: 5rem; */
   border: 2rem solid hsl(275, 100%, 25%);
   border-radius: 50%;
