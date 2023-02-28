@@ -41,34 +41,6 @@ let animTableItem = (item, showTextContent, animClass) => {
 	});
 };
 
-// for (let orderedItemBox of orderedItemBoxes) {
-// 	orderedItemBox.addEventListener("click", () => {
-// 		orderedItemBox.classList.add("anim-order");
-//     food.classList.add("anim-food")
-//     backToTableBtn.classList.remove("hide-back-btn");
-//     backToTableBtn.classList.add("show-back-btn");
-// 	});
-// }
-
-// coffeeBox.addEventListener("click", () => {
-//   coffeeBox.classList.add("anim-order");
-//     backToTableBtn.classList.remove("hide-back-btn");
-//     backToTableBtn.classList.add("show-back-btn");
-// })
-
-// foodBox.addEventListener("click", () => {
-//   foodBox.classList.add("anim-order");
-//     food.classList.add("anim-food")
-//     backToTableBtn.classList.remove("hide-back-btn");
-//     backToTableBtn.classList.add("show-back-btn");
-// })
-
-// tablet.addEventListener("click", () => {
-// 	tablet.classList.add("anim-tablet");
-// 	backToTableBtn.classList.remove("hide-back-btn");
-// 	backToTableBtn.classList.add("show-back-btn");
-// });
-
 animTableItem(coffeeBox, aboutMe, "anim-order");
 animTableItem(foodBox, likesInterests, "anim-order");
 animTableItem(tablet, "anim-tablet");
