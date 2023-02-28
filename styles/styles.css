@@ -58,18 +58,23 @@ h2 {
 /* information container styles */
 .top-content .anim-order {
   transform: scale(10);
+  transform-origin: center center;
   position: fixed;
-  top: 50%; 
-  right: 50%; 
-  left: 50%; 
-  bottom: 50%;
-  margin:auto;
+  top: 45%; 
+  right: 45%; 
+  left: 45%; 
+  bottom: 45%;
+  margin: auto;
+  /* align-self: center; */
   z-index: 10;
 }
 .anim-order > section,
 .anim-order > h2, 
 .anim-order > p {
-  transform: scale(calc(1/10));
+  /* transform: translateZ(0); */
+  transform: translateZ(0) scale(calc(1/10));
+  -webkit-font-smoothing: subpixel-antialiased;
+  backface-visibility: hidden;
 }
 .anim-food {
   transform: translate(10rem, -10rem);
@@ -110,7 +115,7 @@ h2 {
   height: fit-content;
   position: relative;
   transition: var(--animateTransition);
-  z-index: 5;
+  z-index: 6;
 }
 
 .coffee-box {
