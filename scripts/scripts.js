@@ -1,9 +1,12 @@
 // animation content area
 let contentContainers = document.querySelectorAll(".select-item");
 let orderedItemBoxes = document.querySelectorAll(".ordered-item-box");
-let coffeeBox = document.querySelector(".coffee-box")
-let foodBox = document.querySelector(".food-box")
+let tableSectionHeadings = document.querySelectorAll(".table-section-heading");
+let coffeeBox = document.querySelector(".coffee-box");
+let aboutMe = document.querySelector(".about-me");
+let foodBox = document.querySelector(".food-box");
 let food = document.querySelector(".food");
+let likesInterests = document.querySelector(".likes-interests");
 let tablet = document.querySelector(".tablet");
 let backToTableBtn = document.querySelector(".back-to-table");
 
@@ -14,20 +17,29 @@ let soundBtn = document.querySelector(".play-and-pause");
 let playing = false;
 
 // some presets
-backToTableBtn.classList.add("hide-back-btn");
+aboutMe.classList.add("hide-content");
+likesInterests.classList.add("hide-content");
+backToTableBtn.classList.add("hide-content");
 
 // trigger animation area
+let animTableItem = (item, showTextContent, animClass) => {
+	item.addEventListener("click", () => {
+		item.classList.add(animClass);
+		if (item.querySelector(".food")) {
+			food.classList.add("anim-food");
+		}
 
-let animTableItem = (item, animClass) => {
-  item.addEventListener("click", () => {
-    item.classList.add(animClass)
-    if (item.querySelector(".food")) {
-      food.classList.add("anim-food")
-    } 
-    backToTableBtn.classList.remove("hide-back-btn");
-    backToTableBtn.classList.add("show-back-btn");
-  })
-}
+		for (let tableSectionHeading of tableSectionHeadings) {
+			tableSectionHeading.classList.remove("show-content");
+			tableSectionHeading.classList.add("hide-content");
+		}
+
+		showTextContent.classList.remove("hide-content");
+		showTextContent.classList.add("show-content");
+		backToTableBtn.classList.remove("hide-content");
+		backToTableBtn.classList.add("show-content");
+	});
+};
 
 // for (let orderedItemBox of orderedItemBoxes) {
 // 	orderedItemBox.addEventListener("click", () => {
@@ -44,8 +56,6 @@ let animTableItem = (item, animClass) => {
 //     backToTableBtn.classList.add("show-back-btn");
 // })
 
-
-
 // foodBox.addEventListener("click", () => {
 //   foodBox.classList.add("anim-order");
 //     food.classList.add("anim-food")
@@ -59,21 +69,30 @@ let animTableItem = (item, animClass) => {
 // 	backToTableBtn.classList.add("show-back-btn");
 // });
 
-
-animTableItem(coffeeBox, "anim-order")
-animTableItem(foodBox, "anim-order")
-animTableItem(tablet, "anim-tablet")
-
+animTableItem(coffeeBox, aboutMe, "anim-order");
+animTableItem(foodBox, likesInterests, "anim-order");
+animTableItem(tablet, "anim-tablet");
 
 // go back to table
 backToTableBtn.addEventListener("click", () => {
 	for (let orderedItemBox of orderedItemBoxes) {
 		orderedItemBox.classList.remove("anim-order");
 	}
-  food.classList.remove("anim-food")
+
+	aboutMe.classList.remove("show-content");
+	aboutMe.classList.add("hide-content");
+	likesInterests.classList.remove("show-content");
+	likesInterests.classList.add("hide-content");
+
+	for (let tableSectionHeading of tableSectionHeadings) {
+		tableSectionHeading.classList.remove("hide-content");
+		tableSectionHeading.classList.add("show-content");
+	}
+
+	food.classList.remove("anim-food");
 	tablet.classList.remove("anim-tablet");
-	backToTableBtn.classList.remove("show-back-btn");
-	backToTableBtn.classList.add("hide-back-btn");
+	backToTableBtn.classList.remove("show-content");
+	backToTableBtn.classList.add("hide-content");
 });
 
 // for the background sound

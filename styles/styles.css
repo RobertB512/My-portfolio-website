@@ -23,6 +23,16 @@ body {
   height: 100vh;
 }
 
+
+/* common styles */
+h2 {
+  font-size: 3.5rem;
+}
+.highlight {
+  color: hsl(0, 0%, 0%);
+  background-color: yellow;
+}
+
 /* table styles */
 .table {
   display: flex;
@@ -114,7 +124,7 @@ body {
 
 .table-section-heading {
   text-align: center;
-  font-size: 3.5rem;
+  /* font-size: 3.5rem; */
   color: hsl(240, 100%, 50%);
   position: absolute;
   top: 5rem;
@@ -133,19 +143,42 @@ body {
   width: 100%;
   height: auto;
 }
-.about-me, .likes-interests {
-  display: none;
+.coffee {
+  rotate: 80deg;
 }
-
 .food {
   width: 70%;
   height: auto;
   position: absolute;
   top: 2rem;
   left: center;
-  z-index: 2;
+  z-index: 3;
   transition: 0.5s;
 }
+
+.table-section {
+  position: absolute;
+  width: 300%;
+}
+
+.table-section p {
+  /* position: absolute; */
+  font-size: 3rem;
+  z-index: 2;
+}
+.table-section h2 {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.about-me {
+  color: hsl(0, 0%, 100%);
+}
+
+.likes-interests {
+  color: hsl(0, 0%, 0%);
+}
+
 
 /* center content */
 /* .center-content {
@@ -245,9 +278,13 @@ body {
 .back-to-table:active {
   background-color: hsl(0, 100%, 27%);
 }
-.hide-back-btn {
+
+
+
+/* javascript classes */
+.hide-content {
   display: none;
 }
-.show-back-btn {
+.show-content {
   display: inline-block;
 }
