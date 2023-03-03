@@ -10,6 +10,10 @@ let likesInterests = document.querySelector(".likes-interests");
 let tablet = document.querySelector(".tablet");
 let backToTableBtn = document.querySelector(".back-to-table");
 
+// tablet content
+let tabletContent = document.querySelector(".tablet-content");
+
+
 // audio selection area
 let backgroundAudio = document.querySelector("audio");
 let soundArea = document.querySelector(".sound-box");
@@ -20,6 +24,7 @@ let playing = false;
 aboutMe.classList.add("hide-content");
 likesInterests.classList.add("hide-content");
 backToTableBtn.classList.add("hide-content");
+tabletContent.classList.add("hide-content")
 
 // trigger animation area
 let animTableItem = (item, showTextContent, animClass) => {
@@ -43,7 +48,7 @@ let animTableItem = (item, showTextContent, animClass) => {
 
 animTableItem(coffeeBox, aboutMe, "anim-order");
 animTableItem(foodBox, likesInterests, "anim-order");
-animTableItem(tablet, "anim-tablet");
+animTableItem(tablet, tabletContent, "anim-tablet");
 
 // go back to table
 backToTableBtn.addEventListener("click", () => {
@@ -55,6 +60,8 @@ backToTableBtn.addEventListener("click", () => {
 	aboutMe.classList.add("hide-content");
 	likesInterests.classList.remove("show-content");
 	likesInterests.classList.add("hide-content");
+	tabletContent.classList.remove("show-content");
+	tabletContent.classList.add("hide-content");
 
 	for (let tableSectionHeading of tableSectionHeadings) {
 		tableSectionHeading.classList.remove("hide-content");
