@@ -316,6 +316,9 @@ h1 {
   width: 8rem;
   height: auto;
 }
+.skill-name {
+  font-size: 2rem;
+}
 
 
 .projects-secion {
@@ -350,6 +353,13 @@ h1 {
 .desktop-img {
   margin-right: 20px;
 }
+
+.project-description-wrapper {
+  text-align: center;
+  width: 70rem;
+  margin-bottom: 20px;
+}
+
 .project-links-wrapper {
   width: fit-content;
 }
