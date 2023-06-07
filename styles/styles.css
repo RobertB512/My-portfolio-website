@@ -88,7 +88,11 @@ h2 {
   transform: translate(10rem, -10rem);
 }
 
-.center-content .anim-tablet {
+.anim-tablet, .center-content {
+  z-index: 10;
+}
+
+.anim-tablet {
   position: fixed;
   top: -100%; 
   right: -100%; 
@@ -96,7 +100,6 @@ h2 {
   bottom: -100%;
   margin: auto;
   transform: scale(5);
-  z-index: 10;
 }
 .anim-tablet > * {
   transform: scale(calc(1/5))
@@ -216,7 +219,8 @@ h2 {
   height: 500%;
   /* height: 100%;
   width: 100%; */
-  /* overflow-y: scroll; */
+  /* overflow: hidden; */
+  overflow-y: scroll;
 }
 .tablet-content li,
 .tablet-content p, 
@@ -283,6 +287,37 @@ h1 {
   rotate: -25deg;
 }
 
+.skills-section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--primary-tablet-color-2);
+  padding: 20px;
+}
+.skills-section h2, .skill-name {
+  color: #000;
+}
+.skills-section h2 {
+  margin-right: 30px;
+  font-size: 4rem;
+}
+.all-skills {
+  display: flex;
+  gap: 30px;
+}
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.skill-img {
+  width: 8rem;
+  height: auto;
+}
+.skill-name {
+  font-size: 3rem;
+}
 
 
 /* ----- SOUND CONTENT ----- */
