@@ -12,7 +12,13 @@ let backToTableBtn = document.querySelector(".back-to-table");
 
 // tablet content
 let tabletContent = document.querySelector(".tablet-content");
-
+let form = document.querySelector("form");
+let errorName = document.querySelector(".error-name");
+let errorEmail = document.querySelector(".error-email");
+let enteredName = document.querySelector("#name");
+let enteredEmail = document.querySelector("#email");
+let enteredMsg = document.querySelector("#message");
+let messageSent = document.querySelector(".message-sent");
 
 // audio selection area
 let backgroundAudio = document.querySelector("audio");
@@ -24,7 +30,7 @@ let playing = false;
 aboutMe.classList.add("hide-content");
 likesInterests.classList.add("hide-content");
 backToTableBtn.classList.add("hide-content");
-tabletContent.classList.add("hide-content")
+tabletContent.classList.add("hide-content");
 
 // trigger animation area
 let animTableItem = (item, showTextContent, animClass) => {
@@ -72,6 +78,19 @@ backToTableBtn.addEventListener("click", () => {
 	tablet.classList.remove("anim-tablet");
 	backToTableBtn.classList.remove("show-content");
 	backToTableBtn.classList.add("hide-content");
+});
+
+// form validation
+form.addEventListener("submit", e => {
+	if (
+		enteredName.validity.valid &&
+		enteredName.validity.valid &&
+		enteredMsg.validity.valid
+	) {
+		messageSent.textContent = "thank you";
+	} else {
+		e.preventDefault();
+	}
 });
 
 // for the background sound

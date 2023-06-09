@@ -88,9 +88,10 @@ h2 {
   transform: translate(10rem, -10rem);
 }
 
-.anim-tablet, .center-content {
+.anim-tablet {
   z-index: 10;
 }
+
 
 .anim-tablet {
   position: fixed;
@@ -202,7 +203,7 @@ h2 {
   border: 5px solid hsl(223, 3%, 46%);
   border-radius: 1rem;
   transition: var(--animateTransition);
-  z-index: 5;
+  z-index: 6;
 }
 .tablet-heading {
   position: static;
@@ -321,9 +322,8 @@ h1 {
 }
 
 
-.projects-secion {
-  display: flex;
-  justify-content: center;
+.projects-section {
+  margin-bottom: 100px;
 }
 .projects-section h2 {
   font-size: 6rem;
@@ -382,6 +382,77 @@ h1 {
 .site-link {
   margin-right: 15px;
 }
+
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.contact-section h2 {
+  margin-bottom: 30px;
+  font-size: 6rem;
+}
+
+form {
+  width: 50rem;
+  height: fit-content;
+  background-color: var(--primary-tablet-color-2);
+  padding: 30px;
+}
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+label, input, textarea {
+  font-size: 2rem;
+}
+form label {
+  color: #000;
+}
+
+input, textarea {
+  padding: 10px 20px;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+input:invalid, textarea:invalid {
+  border: 3px solid #ff0000;
+}
+textarea {
+  resize: none;
+}
+.error-msg {
+  color: #ff0000;
+}
+.submit-btn {
+  color: var(--primary-tablet-color-2);
+  background-color: #000;
+  padding: 10px 30px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  border-block-start-style: 5px;
+}
+.submit-btn:hover {
+  background-color: transparent;
+  color: #000;
+}
+.submit-btn:active {
+  background-color: #000;
+  color: var(--primary-tablet-color-2);
+  border: none;
+  margin-bottom: 10px;
+}
+.message-sent {
+  color: #000;
+  font-size: 3rem;
+  text-align: center;
+}
+
 
 
 /* ----- SOUND CONTENT ----- */
