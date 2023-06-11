@@ -60,7 +60,7 @@ h2 {
 /* information container styles */
 .top-content .anim-order {
   transform: scale(10);
-  transform-origin: center center;
+  transform-origin: center;
   position: fixed;
   top: 45%; 
   right: 45%; 
@@ -197,8 +197,8 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30rem;
-  height: var(--tabletHeight);
+  width: 30rem; /* make 20vh for responsiveness */
+  height: var(--tabletHeight); /* make 20vh for responsiveness */
   background-color: hsl(0, 0%, 0%);
   border: 5px solid hsl(223, 3%, 46%);
   border-radius: 1rem;
@@ -456,7 +456,7 @@ textarea {
 
 
 /* ----- SOUND CONTENT ----- */
-.sound-box {
+/* .sound-box {
   display: flex;
   justify-content: center;
   width: 35rem;
@@ -488,7 +488,7 @@ textarea {
   top: 10rem;
   left: 4rem;
 
-}
+} */
 
 
 .back-to-table {
