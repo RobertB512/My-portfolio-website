@@ -1,7 +1,7 @@
 /* variables */
 :root {
   --animateTransition: 1.5s;
-  --tabletHeight: 15rem;
+  /* --tabletHeight: 15rem; */
   --primary-tablet-color: hsl(237, 68%, 16%);
   --primary-tablet-color-2: hsl(0, 0%, 100%);
 }
@@ -46,19 +46,22 @@ h2 {
   height: 100%;
 }
 
-.top-content,
-.center-content,
-.bottom-content {
+/*.top-content,*/
+.center-content /*,
+.bottom-content */{
   display: flex;
   justify-content: center;
   align-items: center;
+  /* gap: 20rem; */
+  position: relative;
+  top: 0;
   width: 100%;
-  height: 33.3%;
-  padding: 5rem 10rem;
+  height: 100%;
+  /* padding: 5rem 10rem; */
 }
 
 /* information container styles */
-.top-content .anim-order {
+.center-content .anim-order {
   transform: scale(10);
   transform-origin: center;
   position: fixed;
@@ -67,7 +70,7 @@ h2 {
   left: 45%; 
   bottom: 45%;
   margin: auto;
-  z-index: 10;
+  z-index: 20;
 }
 .anim-order > section,
 .anim-order > h2, 
@@ -88,32 +91,13 @@ h2 {
   transform: translate(10rem, -10rem);
 }
 
-.anim-tablet {
-  z-index: 10;
-}
-
-
-.anim-tablet {
-  position: fixed;
-  top: -100%; 
-  right: -100%; 
-  left: -100%; 
-  bottom: -100%;
-  margin: auto;
-  transform: scale(5);
-}
-.anim-tablet > * {
-  transform: scale(calc(1/5))
-}
-
-
 
 /* top content */
-.top-content {
+/* .top-content {
   justify-content: space-between;
   position: absolute;
   top: 0;
-}
+} */
 
 .coffee-box, .food-box {
   display: flex;
@@ -122,18 +106,18 @@ h2 {
   justify-content: center;
   width: 17rem;
   height: fit-content;
-  position: relative;
+  position: absolute;
   transition: var(--animateTransition);
   z-index: 6;
 }
 
 .coffee-box {
-  top: 0;
-  left: 0;
+  top: 40%;
+  left: 20%;
 }
 .food-box {
-  top: 0;
-  right: 0;
+  top: 40%;
+  right: 20%;
 } 
 
 .table-section-heading {
@@ -197,8 +181,8 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30rem; /* make 20vh for responsiveness */
-  height: var(--tabletHeight); /* make 20vh for responsiveness */
+  width: 20vw; /* make 20vh for responsiveness */
+  height: 20vh; /* make 20vh for responsiveness */
   background-color: hsl(0, 0%, 0%);
   border: 5px solid hsl(223, 3%, 46%);
   border-radius: 1rem;
@@ -209,6 +193,20 @@ h2 {
   position: static;
   color: hsl(0, 0%, 100%);
   font-size: 2rem;
+}
+
+.anim-tablet {
+  position: fixed;
+  top: -100%; 
+  right: -100%; 
+  left: -100%; 
+  bottom: -100%;
+  margin: auto;
+  transform: scale(5);
+  z-index: 10;
+}
+.anim-tablet > * {
+  transform: scale(calc(1/5))
 }
 
 /* ----- TABLET CONTENT ----- */
@@ -500,7 +498,7 @@ textarea {
   background-color: hsl(0, 100%, 27%);
   color: hsl(0, 0%, 100%);
   font-size: 2.5rem;
-  z-index: 15;
+  z-index: 100;
 }
 .back-to-table:hover {
   background-color: hsl(0, 100%, 60%);
