@@ -20,11 +20,6 @@ let enteredEmail = document.querySelector("#email");
 let enteredMsg = document.querySelector("#message");
 let messageSent = document.querySelector(".message-sent");
 
-// audio selection area
-// let backgroundAudio = document.querySelector("audio");
-// let soundArea = document.querySelector(".sound-box");
-// let soundBtn = document.querySelector(".play-and-pause");
-// let playing = false;
 
 // some presets
 aboutMe.classList.add("hide-content");
@@ -92,17 +87,3 @@ form.addEventListener("submit", e => {
 		e.preventDefault();
 	}
 });
-
-// for the background sound
-// soundBtn.addEventListener("click", () => {
-// 	playing ? backgroundAudio.pause() : backgroundAudio.play();
-
-// 	backgroundAudio.onplaying = () => {
-// 		playing = true;
-// 		soundBtn.textContent = "PAUSE";
-// 	};
-// 	backgroundAudio.onpause = () => {
-// 		playing = false;
-// 		soundBtn.textContent = "PLAY";
-// 	};
-// });
