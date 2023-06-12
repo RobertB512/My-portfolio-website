@@ -101,11 +101,9 @@ h2 {
 }
 
 .coffee-box {
-  top: 40%;
   left: 20%;
 }
 .food-box {
-  top: 40%;
   right: 20%;
 } 
 
@@ -144,7 +142,7 @@ h2 {
 
 .table-section {
   position: absolute;
-  width: clamp(100%, 120%, 300%);
+  width: 300%;
 }
 .table-section h2 {
   font-size: 4rem;
@@ -515,13 +513,13 @@ footer {
     margin-bottom: 100px;
   }
   .coffee-box {
-    top: 10%;
-    left: 40%;
+    top: 5%;
+    left: auto;
   }
   .food-box {
     top: auto;
-    bottom: 10%;
-    right: 40%;
+    bottom: 5%;
+    right: auto;
   }
   
 }
@@ -540,7 +538,19 @@ footer {
     height: auto;
   }
 }
+@media (max-width: 700px) {
+  .table-section {
+    width: 200%;
+  }
+}
 @media (max-width: 570px) {
+  .table-section {
+    width: 160%;
+  }
+  .table-section h2 {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
   .skills-section {
     flex-direction: column;
   }
@@ -603,6 +613,9 @@ footer {
 @media (max-width: 350px) {
   .contact-section {
     padding: 30px 5px 5px;
+  }
+  .tablet-heading {
+    font-size: 1.2rem;
   }
 }
 
