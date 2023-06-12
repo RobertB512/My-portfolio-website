@@ -144,17 +144,17 @@ h2 {
 
 .table-section {
   position: absolute;
-  width: clamp(150%, 200%, 300%);
-}
-
-.table-section p {
-  font-size: clamp(1.6rem, 2rem, 3rem);
-  z-index: 2;
+  width: clamp(100%, 120%, 300%);
 }
 .table-section h2 {
   font-size: 4rem;
   margin-bottom: 3rem;
 }
+.table-section p {
+  font-size: clamp(1.6rem, 2rem, 3rem);
+  z-index: 2;
+}
+
 
 .about-me {
   color: hsl(0, 0%, 100%);
@@ -240,6 +240,7 @@ nav ul {
 }
 nav li {
   color: var(--primary-tablet-color-2);
+  text-align: center;
 }
 nav a {
   color: hsl(0, 0%, 100%);
@@ -261,15 +262,14 @@ header {
   justify-content: center;
   align-items: center;
   gap: 100px;
-  height: 100%;
 }
 h1 {
-  font-size: clamp(4rem, 5rem, 6rem);
+  font-size: clamp(3rem, 4.5rem, 6rem);
   width: 50rem;
   text-align: center;
 }
 .hand-img {
-  width: 30rem;
+  width: clamp(15rem, 20rem, 30rem);
   height: auto;
   rotate: -25deg;
 }
@@ -281,7 +281,7 @@ h1 {
   flex-wrap: wrap;
   background-color: var(--primary-tablet-color-2);
   padding: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 .skills-section h2, .skill-name {
   color: #000;
@@ -292,6 +292,8 @@ h1 {
 }
 .all-skills {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
 }
 .skill {
@@ -313,9 +315,9 @@ h1 {
   margin-bottom: 100px;
 }
 .projects-section h2 {
-  font-size: 6rem;
+  font-size: clamp(4rem, 5rem 6rem);
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 .project {
   display: flex;
@@ -327,18 +329,18 @@ h1 {
 }
 .project-name {
   color: var(--primary-tablet-color-2);
-  font-size: 3rem;
+  font-size: clamp(2rem, 2.5rem, 3rem);
+  text-align: center;
   margin-bottom: 20px;
 }
 .project-img-wrapper {
+  display: flex;
+  gap: 20px;
   margin-bottom: 20px;
 }
 .project-img {
   width: auto;
   height: 30rem;
-}
-.desktop-img {
-  margin-right: 20px;
 }
 
 .project-description-wrapper {
@@ -348,6 +350,8 @@ h1 {
 }
 
 .project-links-wrapper {
+  display: flex;
+  gap: 15px;
   width: fit-content;
 }
 .project-link {
@@ -366,9 +370,6 @@ h1 {
   color: var(--primary-tablet-color-2);
   background-color: #000;
 }
-.site-link {
-  margin-right: 15px;
-}
 
 /* CONTACT SECTION STYLES */
 .contact-section {
@@ -385,7 +386,8 @@ h1 {
 .contact-section h2 {
   color: #000;
   margin-bottom: 30px;
-  font-size: 6rem;
+  text-align: center;
+  font-size: clamp(4rem, 5rem, 6rem);
 }
 form {
   margin-bottom: 25px;
@@ -464,13 +466,14 @@ footer {
 }
 
 .attribution-area h2 {
-  font-size: clamp(3.5rem, 5rem, 6rem);
+  font-size: clamp(2rem, 3rem, 6rem);
 }
 .img-attrib-description {
   margin-bottom: 30px;
 }
 .attribution-area ul {
   list-style-position: inside;
+  width: 100%;
 }
 
 /* BACK BUTTON STYLES */
@@ -524,7 +527,6 @@ footer {
 }
 @media (max-width: 800px) {
   .project-img-wrapper {
-    display: flex;
     flex-direction: column;
     align-items: center;
 
@@ -544,5 +546,71 @@ footer {
   }
   .skills-section h2 {
     margin-bottom: 20px;
+    margin-right: 0;
+  }
+  .project-links-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  nav {
+    height: 8rem;
+    margin-bottom: 50px;
+  }
+  nav a {
+    padding: 25px 20px;
+  }
+  header {
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  .hand-img {
+    width: 15rem;
+  }
+  .table-section {
+    width: 160%;
+  }
+  .table-section h2 {
+    margin-bottom: 1.5rem;
+    position: relative;
+    left: -7rem;
+  }
+  .table-section p {
+    position: relative;
+    left: -7rem;
+  }
+  .tablet-heading {
+    font-size: 1.5rem;
+  }
+  .mobile-img {
+    width: 100%;
+  }
+  .contact-section {
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .contact-section {
+    padding: 30px 5px 5px;
+  }
+}
+
+@media (max-width: 300px) {
+  .contact-section h2 {
+    font-size: 4rem;
+  }
+  footer {
+    padding: 25px 10px 10px;
   }
 }
