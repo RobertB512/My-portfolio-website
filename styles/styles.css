@@ -101,10 +101,10 @@ h2 {
 }
 
 .coffee-box {
-  left: 20%;
+  left: 5%;
 }
 .food-box {
-  right: 20%;
+  right: 5%;
 } 
 
 .table-section-heading {
@@ -505,14 +505,7 @@ footer {
 
 /* ------ MEDIA QUERIES ----- */
 @media (max-width: 1000px) {
-  nav {
-    margin-bottom: 100px;
-  }
-  header {
-    flex-direction: column;
-    margin-bottom: 100px;
-  }
-  .coffee-box {
+  /* .coffee-box {
     top: 5%;
     left: auto;
   }
@@ -520,7 +513,15 @@ footer {
     top: auto;
     bottom: 5%;
     right: auto;
+  } */
+  nav {
+    margin-bottom: 100px;
   }
+  header {
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+  
   
 }
 @media (max-width: 800px) {
@@ -544,6 +545,15 @@ footer {
   }
 }
 @media (max-width: 570px) {
+  .coffee-box {
+    top: 5%;
+    left: auto;
+  }
+  .food-box {
+    top: auto;
+    bottom: 5%;
+    right: auto;
+  }
   .table-section {
     width: 160%;
   }
@@ -563,7 +573,7 @@ footer {
     align-items: center;
   }
   footer {
-    padding: 25px;
+    padding: 50px 25px ;
   }
 }
 
