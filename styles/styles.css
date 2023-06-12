@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: no-repeat center/100% url(../images/rusticWoodBackground.jpg);
+  background: no-repeat center url(../images/rusticWoodBackground.jpg);
   height: 100vh;
   overflow: hidden;
 }
@@ -144,11 +144,11 @@ h2 {
 
 .table-section {
   position: absolute;
-  width: 300%;
+  width: clamp(150%, 200%, 300%);
 }
 
 .table-section p {
-  font-size: 3rem;
+  font-size: clamp(1.6rem, 2rem, 3rem);
   z-index: 2;
 }
 .table-section h2 {
@@ -264,7 +264,7 @@ header {
   height: 100%;
 }
 h1 {
-  font-size: 8rem;
+  font-size: clamp(4rem, 5rem, 6rem);
   width: 50rem;
   text-align: center;
 }
@@ -343,7 +343,7 @@ h1 {
 
 .project-description-wrapper {
   text-align: center;
-  width: 70rem;
+  width: 90%;
   margin-bottom: 20px;
 }
 
@@ -464,7 +464,7 @@ footer {
 }
 
 .attribution-area h2 {
-  font-size: 6rem;
+  font-size: clamp(3.5rem, 5rem, 6rem);
 }
 .img-attrib-description {
   margin-bottom: 30px;
@@ -499,4 +499,50 @@ footer {
 }
 .show-content {
   display: inline-block;
+}
+
+
+/* ------ MEDIA QUERIES ----- */
+@media (max-width: 1000px) {
+  nav {
+    margin-bottom: 100px;
+  }
+  header {
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+  .coffee-box {
+    top: 10%;
+    left: 40%;
+  }
+  .food-box {
+    top: auto;
+    bottom: 10%;
+    right: 40%;
+  }
+  
+}
+@media (max-width: 800px) {
+  .project-img-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .desktop-img {
+    width: 100%;
+    height: auto;
+  }
+  .mobile-img {
+    width: 50%;
+    height: auto;
+  }
+}
+@media (max-width: 570px) {
+  .skills-section {
+    flex-direction: column;
+  }
+  .skills-section h2 {
+    margin-bottom: 20px;
+  }
 }
