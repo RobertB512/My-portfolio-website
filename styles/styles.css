@@ -5,6 +5,11 @@
   --primary-tablet-color-2: hsl(0, 0%, 100%);
 }
 
+/* .bottom-test img {
+  width: 20vw;
+  height: 20vh;
+} */
+
 /* reset, html, and body styles */
 * {
   padding: 0;
@@ -127,9 +132,7 @@ h2 {
   width: 100%;
   height: auto;
 }
-.coffee {
-  rotate: 80deg;
-}
+
 .food {
   width: 70%;
   height: auto;
@@ -260,6 +263,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 100px;
+  height: 100%;
 }
 h1 {
   font-size: clamp(3rem, 4.5rem, 6rem);
