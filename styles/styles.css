@@ -68,11 +68,12 @@ h2 {
   position: fixed;
   top: 45%; 
   right: 45%; 
-  left: 45%; 
   bottom: 45%;
+  left: 45%; 
   margin: auto;
   z-index: 20;
 }
+
 .anim-order > section,
 .anim-order > h2, 
 .anim-order > p,
@@ -98,7 +99,6 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 17rem;
   height: fit-content;
   position: absolute;
   transition: var(--animateTransition);
@@ -107,10 +107,23 @@ h2 {
 
 .coffee-box {
   left: 5%;
+  width: 17rem;
+}
+.coffee-box.anim-order {
+  top: auto;
+  right: auto;
+  bottom: auto;
 }
 .food-box {
   right: 5%;
+  width: 19rem;
 } 
+
+.food-box.anim-order {
+  top: auto;
+  left: auto;
+  bottom: auto;
+}
 
 .table-section-heading {
   text-align: center;
@@ -134,13 +147,13 @@ h2 {
 }
 
 .food {
-  width: 70%;
+  width: 65%;
   height: auto;
   position: absolute;
-  top: 2rem;
+  top: 3.5rem;
   left: center;
   z-index: 3;
-  transition: 0.5s;
+  transition: 1s;
 }
 
 .table-section {
@@ -156,12 +169,7 @@ h2 {
   z-index: 2;
 }
 
-
-.about-me {
-  color: hsl(0, 0%, 100%);
-}
-
-.likes-interests {
+.about-me, .likes-interests {
   color: hsl(0, 0%, 0%);
 }
 .likes-interests p:first-of-type {
@@ -209,6 +217,7 @@ h2 {
   position: absolute;
   width: 500%;
   height: 500%;
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 .tablet-content li,
@@ -266,12 +275,12 @@ header {
   height: 100%;
 }
 h1 {
-  font-size: clamp(3rem, 4.5rem, 6rem);
+  font-size: 8rem;
   width: 50rem;
   text-align: center;
 }
 .hand-img {
-  width: clamp(15rem, 20rem, 30rem);
+  width: 30rem;
   height: auto;
   rotate: -25deg;
 }
@@ -286,7 +295,7 @@ h1 {
   margin-bottom: 80px;
 }
 .skills-section h2, .skill-name {
-  color: #000;
+  color: hsl(0, 0%, 0%);
 }
 .skills-section h2 {
   margin-right: 30px;
@@ -317,7 +326,7 @@ h1 {
   margin-bottom: 100px;
 }
 .projects-section h2 {
-  font-size: clamp(4rem, 5rem 6rem);
+  font-size: 6rem;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -359,18 +368,18 @@ h1 {
 .project-link {
   font-size: 2rem;
   color: var(--primary-tablet-color-2);
-  background-color: #000;
+  background-color: hsl(0, 0%, 0%);
   padding: 10px 50px;
   text-decoration: none;
   border-radius: 5px;
 }
 .project-link:hover {
-  color: #000;
+  color: hsl(0, 0%, 0%);
   background-color: var(--primary-tablet-color-2);
 }
 .project-link:active {
   color: var(--primary-tablet-color-2);
-  background-color: #000;
+  background-color: hsl(0, 0%, 0%);
 }
 
 /* CONTACT SECTION STYLES */
@@ -379,14 +388,14 @@ h1 {
   flex-direction: column;
   align-items: center;
   margin: 0 auto 100px;
-  width: fit-content;
+  max-width: 700px;
   height: fit-content;
   background-color: var(--primary-tablet-color-2);
   padding: 30px;
   border-radius: 5px;
 }
 .contact-section h2 {
-  color: #000;
+  color: hsl(0, 0%, 0%);
   margin-bottom: 30px;
   text-align: center;
   font-size: clamp(4rem, 5rem, 6rem);
@@ -405,44 +414,44 @@ label, input, textarea {
   font-size: 2rem;
 }
 form label {
-  color: #000;
+  color: hsl(0, 0%, 0%);
 }
 
 input, textarea {
   padding: 10px 20px;
   width: 100%;
-  border: 1px solid #000;
+  border: 1px solid hsl(0, 0%, 0%);
   border-radius: 5px;
 }
 input:invalid, textarea:invalid {
-  border: 3px solid #ff0000;
+  border: 3px solid hsl(0, 100%, 50%);
 }
 textarea {
   resize: none;
 }
 .error-msg {
-  color: #ff0000;
+  color: hsl(0, 100%, 50%);
 }
 .submit-btn {
   color: var(--primary-tablet-color-2);
-  background-color: #000;
+  background-color: hsl(0, 0%, 0%);
   padding: 10px 30px;
-  border: 2px solid #000;
+  border: 2px solid hsl(0, 0%, 0%);
   border-radius: 5px;
   border-block-start-style: 5px;
 }
 .submit-btn:hover {
   background-color: transparent;
-  color: #000;
+  color: hsl(0, 0%, 0%);
 }
 .submit-btn:active {
-  background-color: #000;
+  background-color: hsl(0, 0%, 0%);
   color: var(--primary-tablet-color-2);
   border: none;
   margin-bottom: 10px;
 }
 .message-sent {
-  color: #000;
+  color: hsl(0, 0%, 0%);
   font-size: 3rem;
   text-align: center;
 }
@@ -463,7 +472,7 @@ textarea {
 
 /* IMAGE ATTRIBUTION STYLES */
 footer {
-  background-color: #000;
+  background-color: hsl(0, 0%, 0%);
   padding: 100px;
 }
 
@@ -509,15 +518,6 @@ footer {
 
 /* ------ MEDIA QUERIES ----- */
 @media (max-width: 1000px) {
-  /* .coffee-box {
-    top: 5%;
-    left: auto;
-  }
-  .food-box {
-    top: auto;
-    bottom: 5%;
-    right: auto;
-  } */
   nav {
     margin-bottom: 100px;
   }
@@ -542,6 +542,10 @@ footer {
     width: 50%;
     height: auto;
   }
+  .contact-section {
+    max-width: 100%;
+    border-radius: 0;
+  }
 }
 @media (max-width: 700px) {
   .table-section {
@@ -550,13 +554,26 @@ footer {
 }
 @media (max-width: 570px) {
   .coffee-box {
-    top: 5%;
+    top: 8%;
     left: auto;
   }
+  .coffee-box.anim-order {
+    top: 45%;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
   .food-box {
     top: auto;
-    bottom: 5%;
+    bottom: 8%;
     right: auto;
+  }
+  .food-box.anim-order {
+    top: auto;
+    right: auto;
+    bottom: 45%;
+    left: auto;
   }
   .table-section {
     width: 160%;
@@ -594,25 +611,28 @@ footer {
     margin-bottom: 50px;
   }
   h1 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
   .hand-img {
-    width: 15rem;
+    width: 20rem;
   }
   .table-section {
-    width: 160%;
+    width: 147%;
   }
   .table-section h2 {
     margin-bottom: 1.5rem;
     position: relative;
-    left: -7rem;
+    /* left: -7rem; */
   }
   .table-section p {
     position: relative;
-    left: -7rem;
+    /* left: -7rem; */
   }
   .tablet-heading {
     font-size: 1.5rem;
+  }
+  .projects-section h2 {
+    font-size: 5rem;
   }
   .mobile-img {
     width: 100%;
@@ -621,23 +641,24 @@ footer {
     width: 100%;
     border-radius: 0;
     margin-bottom: 0;
+    padding: 30px 5px 5px;
+  }
+  footer {
+    padding: 25px 10px 50px;
   }
 }
 
 @media (max-width: 350px) {
-  .contact-section {
-    padding: 30px 5px 5px;
-  }
   .tablet-heading {
     font-size: 1.2rem;
   }
 }
 
 @media (max-width: 300px) {
+  h1 {
+    font-size: 4.5rem;
+  }
   .contact-section h2 {
     font-size: 4rem;
-  }
-  footer {
-    padding: 25px 10px 10px;
   }
 }
