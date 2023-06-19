@@ -25,8 +25,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: no-repeat center url(../images/rusticWoodBackground.webp);
+  background: url(../images/rusticWoodBackground.webp) center no-repeat;
   height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
 
@@ -102,6 +103,7 @@ h2 {
   height: fit-content;
   position: absolute;
   transition: var(--animateTransition);
+  /* overflow-y: scroll; */
   z-index: 6;
 }
 
@@ -172,6 +174,7 @@ h2 {
 
 .about-me, .likes-interests {
   color: hsl(0, 0%, 0%);
+  /* overflow-y: scroll; */
 }
 .likes-interests p:first-of-type {
   margin-bottom: 15px;
@@ -461,6 +464,11 @@ textarea {
   margin-left: 0;
   width: 100%;
 }
+.social-area h3 {
+  color: hsl(0, 0%, 0%);
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
 .social-area ul {
   list-style: none;
   display: flex;
@@ -495,10 +503,10 @@ footer {
   bottom: 1.5rem;
   border: none;
   border-radius: 9999px;
-  padding: 1.5rem 2.5rem;
+  padding: 1rem 2.5rem;
   background-color: hsl(0, 100%, 27%);
   color: hsl(0, 0%, 100%);
-  font-size: 2.5rem;
+  font-size: 2rem;
   z-index: 100;
 }
 .back-to-table:hover {
@@ -551,7 +559,14 @@ footer {
 }
 @media (max-width: 700px) {
   .table-section {
-    width: 200%;
+    width: 300%;
+  }
+  .likes-interests h2, .likes-interests p {
+    position: relative;
+    left: 5rem;
+  }
+  .table-section h2 {
+    margin-bottom: 1.5rem;
   }
 }
 @media (max-width: 570px) {
@@ -601,6 +616,9 @@ footer {
 }
 
 @media (max-width: 400px) {
+  .likes-interests h2, .likes-interests p {
+    left: -2.55rem;
+  }
   nav {
     height: 8rem;
     margin-bottom: 50px;
@@ -662,5 +680,84 @@ footer {
   }
   .contact-section h2 {
     font-size: 4rem;
+  }
+  .likes-interests h2, .likes-interests p {
+    left: 0;
+  }
+}
+
+
+/* bigger screens media queries */
+@media (min-width: 1500px) {
+  .coffee-box {
+    left: 15%;
+  }
+  .food-box {
+    right: 15%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .coffee-box {
+    left: 22%;
+  }
+  .food-box {
+    right: 22%;
+  }
+  .table-section h2 {
+    font-size: 4rem;
+  }
+  .table-section p {
+    font-size: 2.5rem;
+  }
+  .project-name {
+    font-size: 4rem;
+  }
+  .project-img {
+    height: 35rem;
+  }
+  .project-description-wrapper .project-description {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 2500px) {
+  .coffee-box {
+    left: 26%;
+  }
+  .food-box {
+    right: 26%;
+  }
+  .table-section h2 {
+    font-size: 4.5rem;
+  }
+  .table-section p {
+    font-size: 3rem;
+  }
+  .projects-section h2 {
+    font-size: 8rem;
+  }
+  .project-name {
+    font-size: 5rem;
+  }
+  .project-img {
+    height: 45rem;
+  }
+  
+}
+
+/* height media queries */
+@media (max-height: 400px) {
+  .table-section h2, .table-section p {
+    position: relative;
+    top: -7rem;
+  }
+  .table-section h2 {
+    margin-bottom: 1rem;
+  }
+}
+@media (max-height: 500px) {
+  header {
+    padding: 200px 0 200px;
   }
 }
