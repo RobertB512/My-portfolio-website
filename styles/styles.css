@@ -507,6 +507,7 @@ footer {
   top: 70%;
   width: 25rem;
   height: auto;
+  display: none;
 }
 
 /* BACK BUTTON STYLES */
@@ -540,6 +541,9 @@ footer {
 
 /* ------ MEDIA QUERIES ----- */
 @media (max-width: 1000px) {
+  .keyboard {
+    left: 35%;
+  }
   nav {
     margin-bottom: 100px;
   }

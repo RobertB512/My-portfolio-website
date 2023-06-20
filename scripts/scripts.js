@@ -20,6 +20,8 @@ let enteredEmail = document.querySelector("#email");
 let enteredMsg = document.querySelector("#message");
 let messageSent = document.querySelector(".message-sent");
 
+// for keyboard
+const keyboard = document.querySelector(".keyboard");
 
 // some presets
 aboutMe.classList.add("hide-content");
@@ -50,6 +52,21 @@ let animTableItem = (item, showTextContent, animClass) => {
 animTableItem(coffeeBox, aboutMe, "anim-order");
 animTableItem(foodBox, likesInterests, "anim-order");
 animTableItem(tablet, tabletContent, "anim-tablet");
+
+
+// take away keyboard
+const getWindowWidth = () => {
+	let windowWidth = window.innerWidth
+  windowWidth < 900
+		? keyboard.classList.add("hide-content")
+		: keyboard.classList.add("show-content");
+};
+window.addEventListener("load", getWindowWidth)
+window.addEventListener("resize", () => {
+  keyboard.classList.remove("show-content", "hide-content")
+  // keyboard.classList.remove("hide-content")
+  getWindowWidth()
+})
 
 // go back to table
 backToTableBtn.addEventListener("click", () => {
