@@ -75,6 +75,10 @@ h2 {
   z-index: 20;
 }
 
+.coffee-box:hover, .food-box:hover, .tablet:hover {
+  cursor: pointer;
+}
+
 .anim-order > section,
 .anim-order > h2, 
 .anim-order > p,
@@ -94,7 +98,13 @@ h2 {
   transform: translate(10rem, -10rem);
 }
 
-
+.coffee-box .table-section-heading, .food-box .table-section-heading {
+  background-color: hsla(0, 0%, 80%, 0.6);
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  width: fit-content;
+  padding: 5px;
+}
 .coffee-box, .food-box {
   display: flex;
   flex-direction: column;
@@ -103,13 +113,16 @@ h2 {
   height: fit-content;
   position: absolute;
   transition: var(--animateTransition);
-  /* overflow-y: scroll; */
   z-index: 6;
 }
+
 
 .coffee-box {
   left: 5%;
   width: 17rem;
+}
+.coffee-box .table-section-heading {
+  left: 40px;
 }
 .coffee-box.anim-order {
   top: auto;
@@ -129,20 +142,11 @@ h2 {
 
 .table-section-heading {
   text-align: center;
-  color: hsl(240, 100%, 50%);
   position: absolute;
-  top: 5rem;
   z-index: 3;
+  font-size: 2.5rem;
 }
-.table-section-heading:hover {
-  color: hsl(240, 100%, 30%);
-  cursor: pointer;
 
-}
-.table-section-heading:active {
-  color: hsl(240, 100%, 50%);
-
-}
 .coffee, .plate {
   width: 100%;
   height: auto;
@@ -174,7 +178,6 @@ h2 {
 
 .about-me, .likes-interests {
   color: hsl(0, 0%, 0%);
-  /* overflow-y: scroll; */
 }
 .likes-interests p:first-of-type {
   margin-bottom: 15px;
@@ -188,16 +191,16 @@ h2 {
   align-items: center;
   width: 20vw; 
   height: 20vh; 
-  background-color: hsl(0, 0%, 0%);
-  border: 5px solid hsl(223, 3%, 46%);
+  background: url(../images/realTablet.webp) center/100% 100% no-repeat;
+  /* background-color: hsl(0, 0%, 0%); */
+  /* border: 5px solid hsl(223, 3%, 46%); */
   border-radius: 1rem;
   transition: var(--animateTransition);
   z-index: 6;
 }
 .tablet-heading {
-  position: static;
-  color: hsl(0, 0%, 100%);
-  font-size: 2rem;
+  position: absolute;
+  color: hsl(0, 0%, 0%);
 }
 
 .anim-tablet {
@@ -225,6 +228,7 @@ h2 {
   overflow-y: scroll;
   display: none;
 }
+
 .tablet-content li,
 .tablet-content p, 
 .tablet-content label {
@@ -495,6 +499,14 @@ footer {
 .attribution-area ul {
   list-style-position: inside;
   width: 100%;
+}
+
+.keyboard {
+  position: absolute;
+  left: 42.5%;
+  top: 70%;
+  width: 25rem;
+  height: auto;
 }
 
 /* BACK BUTTON STYLES */
