@@ -98,6 +98,7 @@ h2 {
   transform: translate(10rem, -10rem);
 }
 
+
 .coffee-box .table-section-heading, .food-box .table-section-heading {
   background-color: hsla(0, 0%, 80%, 0.6);
   color: hsl(0, 0%, 100%);
@@ -192,15 +193,16 @@ h2 {
   width: 20vw; 
   height: 20vh; 
   background: url(../images/realTablet.webp) center/100% 100% no-repeat;
-  /* background-color: hsl(0, 0%, 0%); */
-  /* border: 5px solid hsl(223, 3%, 46%); */
   border-radius: 1rem;
   transition: var(--animateTransition);
   z-index: 6;
 }
 .tablet-heading {
-  position: relative;
-  color: hsl(0, 0%, 0%);
+  background-color: hsl(0, 0%, 0%, 0.6);
+  color: hsl(0, 0%, 80%);
+  padding: 5px;
+  border-radius: 5px;
+  width: fit-content;
 }
 
 .anim-tablet {
@@ -551,9 +553,8 @@ footer {
     flex-direction: column;
     margin-bottom: 100px;
   }
-  
-  
 }
+
 @media (max-width: 800px) {
   .project-img-wrapper {
     flex-direction: column;
@@ -573,7 +574,11 @@ footer {
     border-radius: 0;
   }
 }
+
 @media (max-width: 700px) {
+  .tablet-heading {
+    width: 200px;
+  }
   .table-section {
     width: 300%;
   }
@@ -585,6 +590,7 @@ footer {
     margin-bottom: 1.5rem;
   }
 }
+
 @media (max-width: 570px) {
   .coffee-box {
     top: 8%;
@@ -664,9 +670,6 @@ footer {
     position: relative;
     /* left: -7rem; */
   }
-  .tablet-heading {
-    font-size: 1.5rem;
-  }
   .projects-section h2 {
     font-size: 5rem;
   }
@@ -681,12 +684,6 @@ footer {
   }
   footer {
     padding: 25px 10px 50px;
-  }
-}
-
-@media (max-width: 350px) {
-  .tablet-heading {
-    font-size: 1.2rem;
   }
 }
 
@@ -772,6 +769,7 @@ footer {
     margin-bottom: 1rem;
   }
 }
+
 @media (max-height: 500px) {
   header {
     padding: 200px 0 200px;
