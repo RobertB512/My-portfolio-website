@@ -199,7 +199,7 @@ h2 {
   z-index: 6;
 }
 .tablet-heading {
-  position: absolute;
+  position: relative;
   color: hsl(0, 0%, 0%);
 }
 
