@@ -29,6 +29,8 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+
 }
 
 
@@ -543,6 +545,9 @@ footer {
 
 /* ------ MEDIA QUERIES ----- */
 @media (max-width: 1000px) {
+  .tablet {
+    height: 18vh;
+  }
   .keyboard {
     left: 35%;
   }
