@@ -64,7 +64,6 @@ const getWindowWidth = () => {
 window.addEventListener("load", getWindowWidth)
 window.addEventListener("resize", () => {
   keyboard.classList.remove("show-content", "hide-content")
-  // keyboard.classList.remove("hide-content")
   getWindowWidth()
 })
 
