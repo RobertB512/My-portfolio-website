@@ -12,13 +12,13 @@ let backToTableBtn = document.querySelector(".back-to-table");
 
 // tablet content
 let tabletContent = document.querySelector(".tablet-content");
-let form = document.querySelector("form");
-let errorName = document.querySelector(".error-name");
-let errorEmail = document.querySelector(".error-email");
-let enteredName = document.querySelector("#name");
-let enteredEmail = document.querySelector("#email");
-let enteredMsg = document.querySelector("#message");
-let messageSent = document.querySelector(".message-sent");
+// let form = document.querySelector("form");
+// let errorName = document.querySelector(".error-name");
+// let errorEmail = document.querySelector(".error-email");
+// let enteredName = document.querySelector("#name");
+// let enteredEmail = document.querySelector("#email");
+// let enteredMsg = document.querySelector("#message");
+// let messageSent = document.querySelector(".message-sent");
 
 // for keyboard
 const keyboard = document.querySelector(".keyboard");
@@ -92,14 +92,14 @@ backToTableBtn.addEventListener("click", () => {
 });
 
 // form validation
-form.addEventListener("submit", e => {
-	if (
-		enteredName.validity.valid &&
-		enteredName.validity.valid &&
-		enteredMsg.validity.valid
-	) {
-		messageSent.textContent = "thank you";
-	} else {
-		e.preventDefault();
-	}
-});
+// form.addEventListener("submit", e => {
+// 	if (
+// 		enteredName.validity.valid &&
+// 		enteredName.validity.valid &&
+// 		enteredMsg.validity.valid
+// 	) {
+// 		messageSent.textContent = "thank you";
+// 	} else {
+// 		e.preventDefault();
+// 	}
+// });
