@@ -402,61 +402,7 @@ h1 {
   text-align: center;
   font-size: clamp(4rem, 5rem, 6rem);
 }
-/* form {
-  margin-bottom: 25px;
-  width: 100%;
-}
-.input-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-bottom: 20px;
-}
-label, input, textarea {
-  font-size: 2rem;
-}
-form label {
-  color: hsl(0, 0%, 0%);
-}
 
-input, textarea {
-  padding: 10px 20px;
-  width: 100%;
-  border: 1px solid hsl(0, 0%, 0%);
-  border-radius: 5px;
-}
-input:invalid, textarea:invalid {
-  border: 3px solid hsl(0, 100%, 50%);
-}
-textarea {
-  resize: none;
-}
-.error-msg {
-  color: hsl(0, 100%, 50%);
-}
-.submit-btn {
-  color: var(--primary-tablet-color-2);
-  background-color: hsl(0, 0%, 0%);
-  padding: 10px 30px;
-  border: 2px solid hsl(0, 0%, 0%);
-  border-radius: 5px;
-  border-block-start-style: 5px;
-}
-.submit-btn:hover {
-  background-color: transparent;
-  color: hsl(0, 0%, 0%);
-}
-.submit-btn:active {
-  background-color: hsl(0, 0%, 0%);
-  color: var(--primary-tablet-color-2);
-  border: none;
-  margin-bottom: 10px;
-}
-.message-sent {
-  color: hsl(0, 0%, 0%);
-  font-size: 3rem;
-  text-align: center;
-} */
 .social-area {
   margin-left: 0;
   width: 100%;
