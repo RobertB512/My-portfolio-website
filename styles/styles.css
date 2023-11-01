@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url(../images/rusticWoodBackground.webp) center no-repeat;
+  background: url(../images/table.jpg) center/cover no-repeat;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -358,7 +358,7 @@ h1 {
 
 .project-description-wrapper {
   text-align: center;
-  width: 90%;
+  max-width: 60%;
   margin-bottom: 20px;
 }
 
@@ -572,6 +572,11 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+
+  .project-description-wrapper {
+    max-width: 80%;
+  }
+
   footer {
     padding: 50px 25px ;
   }
@@ -638,7 +643,7 @@ footer {
 }
 
 
-/* bigger screens media queries */
+/* responsive sizing for larger screens */
 @media (min-width: 1500px) {
   .coffee-box {
     left: 15%;
